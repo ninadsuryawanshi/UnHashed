@@ -108,7 +108,7 @@ def calculate_time_to_crack(password, guesses_per_second):
 def main():
     try:
         password = input("Enter the password: ")
-        guesses_per_second = float(input("Enter guesses per second (e.g., 1e9 for high-end GPU): "))
+        guesses_per_second = 100000000000
         
         result = calculate_time_to_crack(password, guesses_per_second)
         
@@ -121,7 +121,7 @@ def main():
         print(f" - Total Search Space: {result['search_space']:.2e} combinations")
         print(f"\nEstimated Crack Time:")
         print(f" - At {guesses_per_second:,.0f} guesses/second")
-        print(f" - Theoretical Time: {result['formatted_time']}")
+        print(f" - Theoretical Time For High End GPU(1e11 Guesses/Sec): {result['formatted_time']}")
         
         print("\nStrength Assessment:")
         print(f" - Entropy: {result['entropy']:.2f} bits")
