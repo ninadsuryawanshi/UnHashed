@@ -5,8 +5,6 @@ def validate_input(password, guesses_per_second):
     """Validate user inputs"""
     if not password:
         raise ValueError("Password cannot be empty")
-    if guesses_per_second <= 0:
-        raise ValueError("Guesses per second must be a positive number")
 
 def advanced_charset_classification(password):
     """Comprehensive character set analysis"""
