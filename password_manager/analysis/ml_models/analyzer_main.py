@@ -2,9 +2,9 @@ import os
 import getpass
 import torch
 import numpy as np
-from dataset_runner import load_models, analyze_password as analyze_leaks
-from pattern_detector import analyze_password as analyze_patterns
-from timetocrack import calculate_time_to_crack
+from analysis.ml_models.dataset_runner import load_models, analyze_password as analyze_leaks
+from analysis.ml_models.pattern_detector import analyze_password as analyze_patterns
+from analysis.ml_models.timetocrack import calculate_time_to_crack
 
 def check_models_available():
     """Check if the required model files exist."""
